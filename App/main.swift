@@ -1,0 +1,3 @@
+import AvailableSample
+
+AvailableSampleApp.main()
