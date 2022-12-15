@@ -17,7 +17,7 @@ struct ContentView: View {
             }
             .sheet(isPresented: $isPresenting) {
                 SheetView()
-                    .halfSheetIfAble()
+                    .presentationDetents([.medium])
             }
         }
     }
