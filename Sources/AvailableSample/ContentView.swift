@@ -1,14 +1,24 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var isPresenting = false
+
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            Button {
+                isPresenting = true
+            } label: {
+                VStack {
+                    Image(systemName: "globe")
+                        .imageScale(.large)
+                    Text("Hello, world!")
+                }.foregroundColor(.accentColor)
+                    .padding()
+            }
+            .sheet(isPresented: $isPresenting) {
+                SheetView(isPresenting: $isPresenting)
+            }
         }
-        .padding()
     }
 }
 
