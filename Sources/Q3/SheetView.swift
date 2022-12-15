@@ -1,8 +1,10 @@
 import SwiftUI
 
 public struct SheetView: View {
+    @available(iOS, deprecated: 15.0, message: "Use dismissAction instead.")
     @Binding var isPresenting: Bool
 
+    @available(iOS, deprecated: 15.0, message: "Use dismissAction instead.")
     public init(isPresenting: Binding<Bool>) {
         _isPresenting = isPresenting
     }
