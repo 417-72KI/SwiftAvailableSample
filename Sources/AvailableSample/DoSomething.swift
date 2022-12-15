@@ -1,6 +1,11 @@
 import Foundation
 
+@available(*, deprecated, renamed: "doSomething()")
 func doSomesing() {
+    doSomething()
+}
+
+func doSomething() {
     // do something
 }
 
