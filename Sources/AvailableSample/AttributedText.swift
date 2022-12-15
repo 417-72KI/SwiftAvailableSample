@@ -1,6 +1,6 @@
 import SwiftUI
 
-@available(iOS, deprecated: 15.0, message: "Use `Text` with `AttributedString`")
+@available(iOS, deprecated: 15.0, obsoleted: 15.0, message: "Use `Text` with `AttributedString`")
 struct AttributedText: View {
     typealias Body = Text
 
@@ -15,7 +15,7 @@ struct AttributedText: View {
     }
 }
 
-@available(iOS, deprecated: 15.0, message: "Use `Text` with `AttributedString`")
+@available(iOS, deprecated: 15.0, obsoleted: 15.0, message: "Use `Text` with `AttributedString`")
 extension AttributedText {
     @resultBuilder
     enum Builder {
