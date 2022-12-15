@@ -1,12 +1,18 @@
 import SwiftUI
 
 struct SheetView: View {
+    @Environment(\.dismiss) var dismiss
+
     @available(iOS, deprecated: 15.0, message: "Use dismissAction instead.")
     @Binding var isPresenting: Bool
 
-    @available(iOS, deprecated: 15.0, message: "Use dismissAction instead.")
+    @available(iOS, deprecated: 15.0, message: "`isPresenting` is no longer used. Use `init()`.")
     init(isPresenting: Binding<Bool>) {
         _isPresenting = isPresenting
+    }
+
+    init() {
+        _isPresenting = .constant(false)
     }
 
     var body: some View {
@@ -16,7 +22,7 @@ struct SheetView: View {
             }.navigationViewStyle(.stack)
                 .navigationBarItems(
                     leading: Button {
-                        isPresenting = false
+                        dismiss()
                     } label: {
                         Image(systemName: "xmark")
                     }
@@ -27,6 +33,6 @@ struct SheetView: View {
 
 struct SheetView_Previews: PreviewProvider {
     static var previews: some View {
-        SheetView(isPresenting: .constant(true))
+        SheetView()
     }
 }
