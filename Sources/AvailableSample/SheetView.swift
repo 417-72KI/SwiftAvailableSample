@@ -1,7 +1,13 @@
 import SwiftUI
 
 struct SheetView: View {
+    @available(iOS, deprecated: 15.0, message: "Use dismissAction instead.")
     @Binding var isPresenting: Bool
+
+    @available(iOS, deprecated: 15.0, message: "Use dismissAction instead.")
+    init(isPresenting: Binding<Bool>) {
+        _isPresenting = isPresenting
+    }
 
     var body: some View {
         NavigationView {
