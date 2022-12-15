@@ -16,8 +16,12 @@ struct ContentView: View {
                     .padding()
             }
             .sheet(isPresented: $isPresenting) {
-                SheetView()
-                    .presentationDetents([.medium])
+                if #available(iOS 16.0, *) {
+                    SheetView()
+                        .presentationDetents([.medium])
+                } else {
+                    SheetView()
+                }
             }
         }
     }
