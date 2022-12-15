@@ -17,7 +17,7 @@ struct ContentView: View {
                     .padding()
             }
             .sheet(isPresented: $isPresenting) {
-                SheetView(isPresenting: $isPresenting)
+                SheetView()
             }
         }
     }
