@@ -6,19 +6,21 @@ struct AttributedStringSampleView: View {
             if #available(iOS 15, *) {
                 Text(attributedString)
             } else {
-                Text("Foo")
-                + Text(" ")
-                + Text("Bar")
-                    .foregroundColor(.red)
-                + Text(" ")
-                + Text("Baz")
-                    .font(.title)
-                + Text(" ")
-                + Text("Qux")
-                    .font(.footnote)
-                    .foregroundColor(.green)
-                + Text(" ")
-                + Text("Quux")
+                AttributedText {
+                    Text("Foo")
+                    Text(" ")
+                    Text("Bar")
+                        .foregroundColor(.red)
+                    Text(" ")
+                    Text("Baz")
+                        .font(.title)
+                    Text(" ")
+                    Text("Qux")
+                        .font(.footnote)
+                        .foregroundColor(.green)
+                    Text(" ")
+                    Text("Quux")
+                }
             }
         }
     }
