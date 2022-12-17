@@ -31,9 +31,9 @@ func call8() {
 }
 
 func notCall1() {
-    doSomething()
+    doSomethingWithFoo()
 }
 
 func notCall2() {
-    doSomething()
+    doSomethingWithFoo()
 }
