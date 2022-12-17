@@ -1,5 +1,6 @@
 import SwiftUI
 
+@available(iOS, deprecated: 16, message: "Use `presentationDetents` in SwiftUI directly.")
 extension View {
     @ViewBuilder
     func presentationDetents(_ detents: Set<PresentationDetent>) -> some View {
@@ -11,6 +12,7 @@ extension View {
     }
 }
 
+@available(iOS, deprecated: 16, message: "Use `SwiftUI.PresentationDetent` directly.")
 /// Backporting for `SwiftUI.PresentationDetent`
 enum PresentationDetent: Hashable {
      case medium
@@ -19,7 +21,7 @@ enum PresentationDetent: Hashable {
      case height(CGFloat)
 }
 
-@available(iOS 16.0, *)
+@available(iOS, introduced: 16.0, deprecated: 16.0)
 extension PresentationDetent {
     var detent: SwiftUI.PresentationDetent {
         switch self {
