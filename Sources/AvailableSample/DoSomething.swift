@@ -4,7 +4,7 @@ func doSomesing() {
     // do something
 }
 
-@available(*, deprecated, renamed: "doSomethingWithFoo(_:)")
+@available(*, unavailable, renamed: "doSomethingWithFoo(_:)")
 func doSomething(with foo: Foo = .init()) {
     doSomethingWithFoo(foo)
 }
