@@ -1,33 +1,33 @@
 func call1() {
-    doSomesing()
+    doSomething()
 }
 
 func call2() {
-    doSomesing()
+    doSomething()
 }
 
 func call3() {
-    doSomesing()
+    doSomething()
 }
 
 func call4() {
-    doSomesing()
+    doSomething()
 }
 
 func call5() {
-    doSomesing()
+    doSomething()
 }
 
 func call6() {
-    doSomesing()
+    doSomething()
 }
 
 func call7() {
-    doSomesing()
+    doSomething()
 }
 
 func call8() {
-    doSomesing()
+    doSomething()
 }
 
 func notCall1() {

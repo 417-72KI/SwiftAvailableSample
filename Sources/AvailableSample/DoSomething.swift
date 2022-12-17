@@ -1,6 +1,6 @@
 import Foundation
 
-func doSomesing() {
+func doSomething() {
     // do something
 }
 
