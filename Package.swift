@@ -15,9 +15,10 @@ let package = Package(
     targets: [
         .target(
             name: "AvailableSample",
-            dependencies: ["Q1", "Q2"]),
+            dependencies: ["Q1", "Q2", "Q3"]),
         .target(name: "Q1"),
         .target(name: "Q2"),
+        .target(name: "Q3"),
         .testTarget(
             name: "AvailableSampleTests",
             dependencies: ["AvailableSample"]),
