@@ -1,9 +1,13 @@
 import SwiftUI
 
-struct SheetView: View {
+public struct SheetView: View {
     @Binding var isPresenting: Bool
 
-    var body: some View {
+    public init(isPresenting: Binding<Bool>) {
+        _isPresenting = isPresenting
+    }
+
+    public var body: some View {
         NavigationView {
             VStack {
                 Text("This is sheet view")
