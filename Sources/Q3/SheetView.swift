@@ -1,10 +1,9 @@
 import SwiftUI
 
 public struct SheetView: View {
-    @Binding var isPresenting: Bool
+    @Environment(\.dismiss) var dismiss
 
-    public init(isPresenting: Binding<Bool>) {
-        _isPresenting = isPresenting
+    public init() {
     }
 
     public var body: some View {
@@ -14,7 +13,7 @@ public struct SheetView: View {
             }.navigationViewStyle(.stack)
                 .navigationBarItems(
                     leading: Button {
-                        isPresenting = false
+                        dismiss()
                     } label: {
                         Image(systemName: "xmark")
                     }
@@ -25,6 +24,6 @@ public struct SheetView: View {
 
 struct SheetView_Previews: PreviewProvider {
     static var previews: some View {
-        SheetView(isPresenting: .constant(true))
+        SheetView()
     }
 }
